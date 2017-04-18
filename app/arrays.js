@@ -26,6 +26,7 @@ exports.arraysAnswers = {
     remove: function(arr, item) {
         var array_length = arr.length-1;
         var new_array = [];
+
         for (var i = 0; i <= array_length; i++) {
 
             if (arr[i] !== item) {
@@ -85,6 +86,7 @@ exports.arraysAnswers = {
     count: function(arr, item) {
         var count = 0;
         var array_length = arr.length-1;
+
         for (var i = 0; i <= array_length; i++) {
 
             if (arr[i] == item) {
@@ -98,6 +100,7 @@ exports.arraysAnswers = {
         arr.sort();
         var array = [];
         var array_length = arr.length-1;
+
         for (var i = 0; i <= array_length; i++) {
 
             if(arr[i] == arr[i+1] && arr[i] !== arr[i+2]) {
@@ -110,6 +113,7 @@ exports.arraysAnswers = {
     square: function(arr) {
         var square_array = [];
         var array_length = arr.length-1;
+
         for (var i = 0; i <= array_length; i++) {
             square_array.push(arr[i]*arr[i]);
         }
@@ -119,6 +123,7 @@ exports.arraysAnswers = {
     findAllOccurrences: function(arr, target) {
         var array_length = arr.length-1;
         var occurrences = [];
+        
         for (var i = 0; i <= array_length; i++) {
             if (arr[i] == target) {
                 occurrences.push(i);

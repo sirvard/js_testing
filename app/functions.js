@@ -2,18 +2,16 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.functionsAnswers = {
     argsAsArray: function(fn, arr) {
-        /*console.log(fn);
-        console.log(arr);
-        var args = Array.prototype.slice.call(arr);
-        console.log(args.sort());*/
+        return  fn.apply(this, arr);
     },
 
     speak: function(fn, obj) {
-
+        return fn.call(obj);
     },
 
     functionFunction: function(str) {
 
+        
     },
 
     makeClosures: function(arr, fn) {
@@ -21,7 +19,10 @@ exports.functionsAnswers = {
     },
 
     partial: function(fn, str1, str2) {
-
+        var partialFn = function(a){
+            return fn(str1,str2,a);
+        };
+        return partialFn;
     },
 
     useArguments: function() {
@@ -33,10 +34,10 @@ exports.functionsAnswers = {
     },
 
     partialUsingArguments: function(fn) {
-
+        
     },
 
     curryIt: function(fn) {
-
+        
     }
 };
