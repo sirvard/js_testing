@@ -2,6 +2,7 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.functionsAnswers = {
     argsAsArray: function(fn, arr) {
+        //console.log(fn.apply(this, arr))
         return  fn.apply(this, arr);
     },
 
@@ -30,11 +31,19 @@ exports.functionsAnswers = {
     },
 
     callIt: function(fn) {
-
+        var args = Array.prototype.slice.call(arguments, 1);
+        return fn.apply(null,args);
     },
 
     partialUsingArguments: function(fn) {
-        
+        var args = Array.prototype.slice.call(arguments,1);
+        //console.log(args);
+        var partialFn = function(){
+            var new_args = args.concat(Array.prototype.slice.call(arguments));
+            //console.log(new_args);
+            return fn.apply(null, new_args);
+        }
+        return partialFn;
     },
 
     curryIt: function(fn) {

@@ -8,11 +8,13 @@ exports.regexAnswers = {
 
     containsRepeatingLetter: function(str) {
         //console.log(str);
-       
+        var hasDuplicates = (/([a-zA-Z]).*?\1/);
+        return hasDuplicates.test(str);  
     },
 
     endsWithVowel: function(str) {
-
+        var aeiou = /[aeiou]$/i;
+        return aeiou.test(str);
     },
 
     captureThreeNumbers: function(str) {

@@ -4,7 +4,7 @@ exports.stringsAnswers = {
   	reduceString: function(str, amount) {
   		/*var re = new RegExp("(.)(?=\\1{" + amount + "})","g");
     	return str.replace(re, "");*/
-        console.log(str,amount);
+        //console.log(str,amount);
 
   	},
 
