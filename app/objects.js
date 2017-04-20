@@ -10,7 +10,13 @@ exports.objectsAnswers = {
   	},
 
   	iterate: function(obj) {
-  		//console.log(obj);
-  		
+        //console.log(obj);
+        var array = [];
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                array.push(key+': ' +obj[key]);
+            }
+        }
+        return array;
   	}
 };

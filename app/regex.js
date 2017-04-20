@@ -18,11 +18,23 @@ exports.regexAnswers = {
     },
 
     captureThreeNumbers: function(str) {
+        var pattern = /\d{3}/g;
+        var matches = str.match(pattern);
+        //console.log(matches);
+        if(matches !== null) {
+            return matches[0];
+        }else{
+            return false;
+        }
 
     },
 
     matchesPattern: function(str) {
-
+        var pattern = /^\d{3}\-\d{3}\-\d{4}$/g;
+        match = pattern.test(str);
+        //console.log(str);
+        //console.log(match);       
+        return match;
     },
 
     isUSD: function(str) {

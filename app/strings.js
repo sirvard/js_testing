@@ -2,10 +2,10 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.stringsAnswers = {
   	reduceString: function(str, amount) {
-  		/*var re = new RegExp("(.)(?=\\1{" + amount + "})","g");
-    	return str.replace(re, "");*/
-        //console.log(str,amount);
-
+  		var re = new RegExp("(.)(?=\\1{" + amount + "})","g");
+    	return str.replace(re, "");
+        console.log(str,amount);
+       
   	},
 
   	wordWrap: function(str, cols) {

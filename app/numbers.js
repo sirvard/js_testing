@@ -2,7 +2,9 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.numbersAnswers = {
   	valueAtBit: function(num, bit) {
-       
+        //console.log((bit-1) & 1) ;
+        //console.log(num);
+        return (num >> (bit-1)) & 1;
   	},
 
   	base10: function(str) {
