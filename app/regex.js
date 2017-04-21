@@ -38,6 +38,6 @@ exports.regexAnswers = {
     },
 
     isUSD: function(str) {
-
+        
     }
 };
